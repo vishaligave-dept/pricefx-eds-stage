@@ -1,0 +1,117 @@
+/* GENERAL STYLES */
+.iframe.block {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.badge__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto -14px;
+  max-width: 880px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.badge__container {
+  margin: 0 3px;
+  max-width: 93px;
+  width: 100%;
+}
+
+.iframe__wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1262px;
+  padding: 36px 0 0 36px;
+  position: relative;
+  width: 100%;
+}
+
+.iframe__wrapper::after {
+  background: var(--c-dark);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.1511;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.frame__wrapper--with-badge.iframe__wrapper::after {
+  height: calc(100% + 58px);
+  top: -58px;
+}
+
+.iframe__container {
+  padding: 0 36px 36px 0;
+  position: relative;
+  max-width: 636px;
+  width: 100%;
+  z-index: 1;
+}
+
+.iframe__container iframe {
+  border: none;
+  display: block;
+  min-height: 600px;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.iframe__left-column,
+.iframe__wrapper--three-iframes .iframe__left-column .iframe__container {
+  max-width: 716px;
+  width: 100%;
+}
+
+.iframe__wrapper--three-iframes .iframe__left-column .iframe__container iframe {
+  min-height: 334px;
+}
+
+.iframe__right-column,
+.iframe__wrapper--three-iframes .iframe__right-column .iframe__container {
+  max-width: 510px;
+  width: 100%;
+}
+
+.iframe__wrapper--three-iframes .iframe__right-column .iframe__container iframe {
+  min-height: 704px;
+}
+
+/* RESPONSIVE STYLES */
+@media (width <= 850px) {
+  .iframe__wrapper {
+    align-items: center;
+    flex-direction: column;
+    padding: 36px 36px 0;
+  }
+
+  .iframe__container {
+    max-width: none !important;
+    padding: 0 0 36px;
+  }
+
+  .iframe__left-column,
+  .iframe__wrapper--three-iframes .iframe__left-column .iframe__container,
+  .iframe__right-column,
+  .iframe__wrapper--three-iframes .iframe__right-column .iframe__container {
+    max-width: none !important;
+  }
+}
+
+@media (width <= 560px) {
+  .iframe__wrapper {
+    padding: var(--spacing-xsmall) var(--spacing-xsmall) 0;
+  }
+
+  .iframe__container {
+    padding: 0 0 var(--spacing-xsmall);
+  }
+}

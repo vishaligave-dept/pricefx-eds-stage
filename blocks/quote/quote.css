@@ -1,0 +1,147 @@
+/* stylelint-disable property-no-vendor-prefix */
+
+.quote-wrapper {
+  display: flex;
+}
+
+.quote {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--c-white);
+}
+
+.quote .quote-text {
+  color: var(--c-white);
+  font-family: var(--ff-secondary);
+  font-size: var(--heading-font-size-s);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  line-height: var(--spacing-medium);
+  text-align: left ;
+  padding-top: calc((20 / 16) * 1rem);
+}
+
+.quote .quote-text h1,
+.quote .quote-text h2,
+.quote .quote-text h3,
+.quote .quote-text h4,
+.quote .quote-text h5,
+.quote .quote-text h6 {
+  background: var(--c-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quote .author {
+  color: var(--c-white);
+  font-family: var(--ff-secondary);
+  font-size: var(--body-font-size-l);
+  font-style: normal;
+  font-weight: var(--fw-regular);
+  line-height: 22px;
+  text-align: left ;
+  padding-top: calc((20 / 16) * 1rem);
+}
+
+.quote .quote-icon {
+  padding-bottom: calc((30 / 16) * 1rem);
+}
+
+.quote .quote-logo{
+  width: 136px;
+  min-height: calc((40 / 16) * 1rem);
+}
+
+.quote .quote-main-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    background-color: var(--c-copy);
+    border-radius: 8px;
+}
+
+.quote .black-background {
+  background-color: var(--c-extra-dark);
+}
+
+.quote .quote-no-image-container {
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+.quote .quote-left-container {
+    flex: 0 0 35%;
+}
+
+.quote .quote-image-container {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+
+.quote .quote-right-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: calc((40 / 16) * 1rem);
+}
+
+.quote .quote-no-left-container {
+  .quote .quote-text, .quote .quote-text p{
+    text-align: center;
+  }
+
+  .quote .quote-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.quote .quote-no-image-container .quote-right-container {
+    text-align: center;
+}
+
+/* Desktop View */
+@media (width >= 768px) {
+  .quote .quote-main-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 780px;
+    min-height: 407px;
+}
+
+  .quote .quote-text , .quote .quote-text p{
+      text-align: center;
+  }
+
+  .quote .quote-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quote .quote-left-container, .quote-right-container {
+    max-width: 100%;
+  }
+
+  .quote .quote-left-container{
+    overflow: hidden;
+  }
+
+  .quote .quote-image-container {
+    max-width: 280px;
+    min-height: 475px;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .quote .author{
+    text-align: center;
+  }
+}
+

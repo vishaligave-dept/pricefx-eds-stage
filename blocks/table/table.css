@@ -1,0 +1,282 @@
+.table {
+  font-family: var(--ff-secondary);
+  border-collapse: collapse;
+  max-width: 1188px;
+  overflow-x:auto;
+  margin-bottom: 20px;
+}
+
+/* Default Table */
+.table .table-default {
+  font-family: var(--ff-secondary);
+  border-collapse: collapse;
+  border: 2px solid var(--c-full-black);
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.table .table-listRow {
+  font-family: var(--ff-secondary);
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  border-spacing: 24px 0;
+}
+
+.table  .table-default td,
+.table .table-default th {
+  border: 1px solid var(--c-table-border);
+  text-align: left;
+  padding: var(--spacing-small) var(--spacing-medium);
+  vertical-align: top;
+}
+
+.table .table-listRow td,
+.table .table-listRow th {
+  border: 1px solid var(--c-table-border);
+  text-align: left;
+  padding: var(--spacing-xsmall) var(--spacing-xxsmall);
+}
+
+.table .table-default tr:nth-child(odd),
+.table .table-listRow tr:nth-child(odd) {
+  background-color: var(--c-disabled);
+}
+
+.table .table-default th, 
+.table .table-listRow th {
+  text-align: left;
+  background-color: var(--c-copy);
+  color: var(--c-white);
+}
+
+.table .table-default th {
+  font-size: var(--heading-font-size-s);
+  font-style: normal;
+  font-weight: var(--fw-lt-bold);
+  line-height: 28px;
+}
+
+.table .table-default td,
+.table .table-listRow td {
+  color: var(--c-copy);
+  font-family: var(--ff-secondary);
+  font-size: var(--body-font-size-l);
+  font-style: normal;
+  font-weight: var(--fw-regular);
+  line-height: 24px;
+}
+
+.table .table-default td h6,
+.table .table-default td h5,
+.table .table-default td h4,
+.table .table-default td h3,
+.table .table-default td h2,
+.table .table-default td h1 {
+  font-size: var(--body-font-size-l);
+  margin-top: 0;
+}
+
+.table .table-listRow th {
+  text-align: center;
+  font-family: var(--ff-primary);
+  font-size: var(--heading-font-size-xl);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  line-height: 56px;
+}
+
+.table .table-listRow .cell-title {
+  vertical-align: top;
+
+  h6,h5,h4,h3,h2,h1 {
+  text-align: center;
+  }
+}
+
+.table .table-listRow .cell-title p {
+  text-align: center;
+  font-family: var(--ff-primary);
+  font-size: var(--body-font-size-l);
+  font-style: normal;
+  font-weight: var(--fw-med);
+  line-height: 20px;
+}
+
+/* Level Table & Level Color common */
+.table .table-level,
+.table .levelcolor {
+  font-family: var(--ff-secondary);
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+
+.table .table-level td,
+.table  .table-level th,
+.table .levelcolor td, 
+.table .levelcolor th {
+  padding: var(--spacing-small) var(--spacing-medium);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table .table-level tr:nth-child(odd), 
+.table .levelcolor tr:nth-child(odd) {
+  background-color: var(--c-table-level);
+}
+
+.table .table-level th, 
+.table .levelcolor th {
+  padding-top: calc((12 / 16) * 1rem);
+  padding-bottom: calc((12 / 16) * 1rem);
+  text-align: left;
+  background-color: var(--c-outline-drk);
+  color: var(--c-white);
+  font-size: var(--heading-font-size-s);
+  font-family: var( --ff-primary);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  line-height: 27px;
+}
+
+.table .table-level td, 
+.table .levelcolor td {
+  color: var(--c-extra-dark);
+  font-size: var(--body-font-size-l);
+  font-style: normal;
+  font-weight: var(--fw-regular);
+  line-height: 28px;
+}
+
+/* level color table */
+
+.table .levelcolor th {
+  padding-top: calc((12 / 16) * 1rem);
+  padding-bottom: calc((12 / 16) * 1rem);
+  text-align: left;
+  background-color: var(--c-table-level-header);
+}
+
+.table .concentric-circle {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.table .table-icon {
+  font-family: var(--ff-secondary);
+  background-color: var(--c-disabled);
+  color: var(--c-full-black);
+  text-align: center;
+  border-collapse: separate; 
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.table .table-icon th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0 3px;
+  background-color: var(--c-copy);
+  color: var(--c-white);
+}
+
+.table .table-icon th:not(:first-child)::after {
+    content: url("../../icons/table-plus.svg");
+    display: flex;
+    font-family: var(--ff-secondary);
+    font-size: var(--base-line-height);
+    font-weight: var(--fw-xx-bold);
+    line-height: 24px;
+    position: relative;
+    left: -35px;
+    bottom: 3px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+}
+
+.table .table-icon td {
+  padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.table .table-icon td,
+.table .table-icon th {
+  border: 1px solid var(--c-white);
+  font-weight: var(--fw-regular);
+  vertical-align: top;
+  padding: 12px;
+}
+
+.table .table-icon th:not(:last-child),
+.table .table-icon td:not(:last-child) {
+  border-right: 12px solid var(--c-white); 
+}
+
+/* IM-connect table */
+
+.table .table-im-connect td, 
+.table .table-im-connect th {
+  border: 1px solid var(--c-table-border);
+  width: 25%;
+}
+
+.table .table-im-connect th {
+  padding: 13px 12px;
+}
+
+.table .table-im-connect td {
+  padding: 21px 12px;
+}
+
+.table .table-im-connect td a.button {
+  margin: 0;
+}
+
+.table .table-im-connect {
+  color: var(--c-full-black);
+  font-family: var(--ff-secondary);
+  font-size: var(--base-font-size);
+  font-style: normal;
+  line-height: 24px; 
+  background: var( --c-table-background);
+  width: 100%;
+  height: 100%;
+}
+
+@media (width>= 985px) { 
+  .table .twoCol th, 
+  .table .twoCol td {
+    width: 50%;
+  }
+
+  .table .threeCol tr th, 
+  .table .threeCol td {
+    width: 33.3%;
+  }
+
+  .table .fourCol th, 
+  .table .fourCol td {
+    width: 25%;
+  }
+
+  .table .table-default,
+  .table .table-listRow,
+  .table .table-icon,
+  .table .table-im-connect {
+    word-break: break-word;
+    table-layout: fixed; 
+  }
+}

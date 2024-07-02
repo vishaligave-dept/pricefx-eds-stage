@@ -1,0 +1,341 @@
+/* stylelint-disable property-no-vendor-prefix */
+
+/* MARKETO FORM GENERAL STYLES */
+.marketo-form-wrapper {
+  margin: 0 auto;
+  max-width: 956px !important;
+  width: 100%;
+}
+
+.form-info-wrapper {
+  margin-bottom: var(--spacing-xsmall);
+}
+
+.form-title {
+  margin: 0 auto 27px;
+  max-width: 780px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-description {
+  color: #1c1d1e;
+  font-size: var(--body-font-size-l);
+  line-height: calc((28 / 16) * 1rem);
+  text-align: center;
+}
+
+.form-description--highlight {
+  font-size: var(--heading-font-size-s);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+.marketo-form-wrapper form {
+  margin: 0 auto;
+  width: auto !important;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFormCol,
+.marketo-form-wrapper .mktoForm .mktoFieldWrap {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFieldWrap {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFieldWrap:has(.mktoCheckboxList) {
+  align-items: center;
+  flex-direction: row;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFieldWrap:has(.mktoCheckboxList) label {
+  order: 2;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFieldWrap:has(.mktoCheckboxList) .mktoGutter {
+  height: 8px;
+  order: 3;
+}
+
+.marketo-form-wrapper .mktoForm .mktoFieldWrap:has(.mktoCheckboxList) label br {
+  display: none;
+}
+
+.marketo-form-wrapper .mktoForm .mktoGutter {
+  height: var(--spacing-micro);
+}
+
+.marketo-form-wrapper .mktoForm .mktoOffset {
+  height: 22px;
+}
+
+.marketo-form-wrapper .mktoAsterix {
+  display: none !important;
+}
+
+.marketo-form-wrapper .mktoForm .form-asterix {
+  padding-left: 5px;
+}
+
+.marketo-form-wrapper .mktoForm .mktoLabel,
+.marketo-form-wrapper .mktoForm .form-asterix,
+.marketo-form-wrapper .mktoForm input[type='text'],
+.marketo-form-wrapper .mktoForm input[type='email'],
+.marketo-form-wrapper .mktoForm input[type='tel'],
+.marketo-form-wrapper .mktoForm textarea,
+.marketo-form-wrapper .mktoForm select.mktoField,
+.marketo-form-wrapper .mktoForm .mktoCheckboxList label {
+  color: #1c1d1e;
+  font-family: var(--ff-secondary);
+  font-size: var(--body-font-size-l);
+  font-weight: var(--fw-regular) !important;
+  line-height: calc((24 / 16) * 1rem);
+  width: auto !important;
+}
+
+.marketo-form-wrapper .mktoForm .mktoLabel {
+  padding: 0;
+}
+
+.marketo-form-wrapper .mktoForm input[type='text'],
+.marketo-form-wrapper .mktoForm input[type='email'],
+.marketo-form-wrapper .mktoForm input[type='tel'],
+.marketo-form-wrapper .mktoForm textarea.mktoField,
+.marketo-form-wrapper .mktoForm select.mktoField {
+  border: 2px solid var(--c-gray-border);
+  border-radius: 8px;
+  padding: 13px 22px;
+  width: 100% !important;
+}
+
+.marketo-form-wrapper .mktoForm select.mktoField {
+  appearance: none;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNi40Nzc1NCA2Ljc1NDc4TDExLjMwMjQgMi4wODI3OEMxMS41NjU5IDEuODEwNzggMTEuNTY1OSAxLjM5NDc4IDExLjMwMjQgMS4xMzg3OEMxMS4wMzg5IDAuODgyNzc3IDEwLjU5NDMgMC44ODI3NzcgMTAuMzMwOCAxLjEzODc4TDYgNS4zNDY3OEwxLjY2OTE2IDEuMTM4NzhDMS4zODkyMiAwLjg4Mjc3NyAwLjk2MTA3OCAwLjg4Mjc3NyAwLjY5NzYwNSAxLjEzODc4QzAuNDM0MTMyIDEuMzk0NzggMC40MzQxMzIgMS44MTA3OCAwLjY5NzYwNSAyLjA4Mjc4TDUuNTA1OTkgNi43NTQ3OEM1Ljc4NTkzIDcuMDEwNzggNi4yMTQwNyA3LjAxMDc4IDYuNDc3NTQgNi43NTQ3OFoiIGZpbGw9IiMzMzMzMzMiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+Cg==');
+  background-position: 97% 55%;
+  background-repeat: no-repeat;
+  padding-right: 35px;
+}
+
+.marketo-form-wrapper .mktoForm textarea {
+  min-height: 114px;
+}
+
+.marketo-form-wrapper .mktoForm .mktoCheckboxList {
+  align-items: center;
+  display: flex;
+  padding: 0;
+  width: auto !important;
+}
+
+.marketo-form-wrapper .mktoForm .mktoCheckboxList input[type='checkbox'] {
+  appearance: none;
+  background: #fafbfc;
+  border: 1px solid var(--c-gray-med);
+  border-radius: 2px;
+  box-shadow: 0 0 1.75px 1.75px rgba(0 0 0 / 25%) inset;
+  cursor: pointer;
+  display: block;
+  float: none;
+  height: 14px;
+  margin-right: 9px;
+  width: 14px;
+}
+
+.marketo-form-wrapper .mktoForm .mktoCheckboxList input[type='checkbox']::before {
+  content: '';
+  display: block;
+  height: 14px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 14px;
+}
+
+.marketo-form-wrapper .mktoForm .mktoCheckboxList input[type='checkbox']:checked::before {
+  background: url('../../icons/check.svg');
+}
+
+.marketo-form-wrapper .mktoForm .mktoCheckboxList label {
+  margin: 0;
+}
+
+.marketo-form-wrapper .mktoForm .mktoButtonWrap {
+  margin: 0 0 0 -10px !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton,
+.marketo-form-wrapper .mktoForm button.mktoButton {
+  appearance: none !important;
+  background: linear-gradient(123deg, #304f8c 4.85%, #466cb9 43.45%, #304f8c 54.85%, #283f6f 86.9%) !important;
+  background-position: left !important;
+  background-size: 300% !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: var(--c-white) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: var(--ff-primary) !important;
+  font-size: var(--base-font-size) !important;
+  font-weight: var(--fw-med) !important;
+  height: auto !important;
+  line-height: 1 !important;
+  margin: var(--spacing-small) 0 !important;
+  padding: var(--spacing-xsmall) var(--spacing-medium) !important;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition: var(--base-transition) !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton:active,
+.marketo-form-wrapper .mktoForm button.mktoButton:active {
+  background: var(--c-btn-drk) !important;
+  outline: none !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton:focus,
+.mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton:hover,
+.marketo-form-wrapper .mktoForm button.mktoButton:focus,
+.marketo-form-wrapper .mktoForm button.mktoButton:hover {
+  background-position: right !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton:focus,
+.marketo-form-wrapper .mktoForm button.mktoButton:focus {
+  outline: 2px solid var(--c-outline-drk) !important;
+  outline-offset: 2px !important;
+}
+
+/* 2-COLUMNS STYLES */
+.marketo-form-wrapper:has(.form-two-columns) {
+  max-width: 1188px !important;
+  width: 100%;
+}
+
+.form-two-columns {
+  display: flex;
+  justify-content: space-between;
+  min-height: 712px;
+}
+
+.form-two-columns form {
+  margin: 0;
+  max-width: 470px;
+  width: 100% !important;
+}
+
+.marketo-form-wrapper .form-two-columns .mktoForm .mktoOffset {
+  height: 14px;
+}
+
+.form-two-columns .form-info-wrapper {
+  margin: 0 var(--spacing-medium) 0 0;
+  max-width: 576px;
+  text-align: left;
+  width: 100%;
+}
+
+.form-two-columns .form-title {
+  margin-bottom: var(--spacing-medium);
+}
+
+.form-two-columns .form-title,
+.form-two-columns .form-description,
+.form-two-columns .form-description--highlight {
+  text-align: left;
+}
+
+.marketo-form-wrapper .form-two-columns .mktoForm .mktoFieldWrap:has(.mktoCheckboxList) .mktoGutter {
+  height: 0;
+}
+
+.marketo-form-wrapper .form-two-columns .mktoForm .mktoButtonWrap {
+  margin: 0 !important;
+}
+
+.form-two-columns .mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton,
+.marketo-form-wrapper .form-two-columns .mktoForm button.mktoButton {
+  margin: 14px 0 !important;
+}
+
+/* HIDE FORM LABELS STYLES */
+.form-hide-labels .mktoForm .mktoFormRow:has(input[type='text']) label:not(:focus, :active),
+.form-hide-labels .mktoForm .mktoFormRow:has(input[type='email']) label:not(:focus, :active),
+.form-hide-labels .mktoForm .mktoFormRow:has(input[type='tel']) label:not(:focus, :active),
+.form-hide-labels .mktoForm .mktoFormRow:has(textarea) label:not(:focus, :active),
+.form-hide-labels .mktoForm .mktoFormRow:has(select) label:not(:focus, :active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.marketo-form-wrapper .mktoForm input[type='text']::placeholder,
+.marketo-form-wrapper .mktoForm input[type='email']::placeholder,
+.marketo-form-wrapper .mktoForm input[type='tel']::placeholder,
+.marketo-form-wrapper .mktoForm textarea.mktoField::placeholder,
+.marketo-form-wrapper .mktoForm select.mktoField {
+  color: rgba(53 53 53 / 80%);
+}
+
+.marketo-form-wrapper .marketo-form h2.form-title {
+  background: var(--c-dark-blue-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* RESPONSIVE STYLES */
+@media (width <= 767px) {
+  .form-two-columns {
+    flex-direction: column;
+    min-height: none;
+  }
+
+  .form-two-columns .form-info-wrapper {
+    margin: 0 0 var(--spacing-small);
+    max-width: none;
+    text-align: center;
+  }
+
+  .form-two-columns .form-title,
+  .form-two-columns .form-description--highlight {
+    text-align: center;
+  }
+
+  .form-two-columns form {
+    max-width: none;
+  }
+}
+
+@media (width <= 480px) {
+  .marketo-form-wrapper .mktoForm .mktoLabel {
+    margin-bottom: var(--spacing-micro);
+  }
+
+  .marketo-form-wrapper .mktoForm input[type='text'],
+  .marketo-form-wrapper .mktoForm input[type='email'],
+  .marketo-form-wrapper .mktoForm input[type='tel'],
+  .marketo-form-wrapper .mktoForm textarea,
+  .marketo-form-wrapper .mktoForm select.mktoField {
+    height: auto;
+  }
+
+  .marketo-form-wrapper .mktoForm .mktoFormCol {
+    margin-bottom: var(--spacing-xsmall) !important;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoDownloadButton button.mktoButton,
+  .marketo-form-wrapper .mktoForm button.mktoButton {
+    margin: 14px 0 !important;
+  }
+}

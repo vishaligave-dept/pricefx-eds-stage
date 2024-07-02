@@ -1,0 +1,89 @@
+/* stylelint-disable property-no-vendor-prefix */
+
+.title-pfx.title-dark-blue-gradient {
+    h1, h2, h3, h4, h5, h6 {
+        background: var(--c-dark-blue-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.title-pfx.title-dark-grey {
+    h1, h2, h3, h4, h5, h6 {
+        background: var(--c-copy);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.title-pfx.title-spacer-small {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+.title-pfx.title-spacer-medium {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: var(--spacing-xsmall);
+        margin-bottom: var(--spacing-xsmall);
+    }
+}
+
+.title-pfx.title-spacer-large {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: var(--spacing-small);
+        margin-bottom: var(--spacing-small);
+    }
+}
+
+.title-pfx.title-spacer-extra-large {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: var(--spacing-medium);
+        margin-bottom: var(--spacing-medium);
+    }
+}
+
+@media (width >= 768px) {
+    .title-pfx.title-spacer-small {
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: var(--spacing-small);
+            margin-bottom: var(--spacing-small);
+        }
+    }
+    
+    .title-pfx.title-spacer-medium {
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: var(--spacing-medium);
+            margin-bottom: var(--spacing-medium);
+        }
+    }
+    
+    .title-pfx.title-spacer-large {
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: var(--spacing-large);
+            margin-bottom: var(--spacing-large);
+        }
+    }
+    
+    .title-pfx.title-spacer-extra-large {
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: var(--spacing-xlarge);
+            margin-bottom: var(--spacing-xlarge);
+        }
+    }
+}
+
+.title-pfx.title-no-top-margin {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+
+.title-pfx.title-no-bottom-margin {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+}

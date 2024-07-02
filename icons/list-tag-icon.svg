@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Check</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#DF549D" offset="0%"></stop>
+            <stop stop-color="#41B6E6" offset="49.5530192%"></stop>
+            <stop stop-color="#F05E25" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="23.9197531%" x2="100%" y2="76.0802469%" id="linearGradient-2">
+            <stop stop-color="#DF549D" offset="0%"></stop>
+            <stop stop-color="#41B6E6" offset="51.1035839%"></stop>
+            <stop stop-color="#F05E25" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[Des]Solutions-(Inner)" transform="translate(-353.000000, -1948.000000)">
+            <g id="Logo-Section" transform="translate(0.000000, 1472.000000)">
+                <g id="Left" transform="translate(356.000000, 356.000000)">
+                    <g id="Check" transform="translate(0.000000, 123.000000)">
+                        <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="3" cx="15" cy="15" r="16.5"></circle>
+                        <path d="M23.5876731,9.37620133 C23.3471844,9.13543029 23.0198211,9 22.6783157,9 C22.3368103,9 22.0094469,9.13543029 21.7689582,9.37620133 L12.2271087,18.8639559 L8.21825109,14.8704506 C7.88192945,14.5478433 7.39783287,14.427911 6.94831586,14.555831 C6.49879886,14.683751 6.15215374,15.0400892 6.03895839,15.4906165 C5.92576303,15.9411438 6.0632145,16.4174143 6.39953615,16.7400215 L11.3177512,21.6237987 C11.5582399,21.8645697 11.8856033,22 12.2271087,22 C12.5686141,22 12.8959775,21.8645697 13.1364661,21.6237987 L23.5876731,11.2457723 C23.8505046,11.0049975 24,10.6660767 24,10.3109868 C24,9.95589691 23.8505046,9.6169761 23.5876731,9.37620133 Z" id="Path" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

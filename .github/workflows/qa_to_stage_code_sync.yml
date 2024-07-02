@@ -1,0 +1,45 @@
+name: QA to STAGE Code Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      syncNow:
+        description: 'Sync Now'
+        required: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout stage repository
+        uses: actions/checkout@v2
+        with:
+          repository: pricefx/pricefx-eds-stage
+          token: ${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}
+          ref: main
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "Github Actions"
+
+      - name: Fetch latest changes from pricefx-eds-qa
+        run: |
+          git remote add pricefx-eds-qa https://github.com/pricefx/pricefx-eds-qa || true
+          git fetch pricefx-eds-qa main:pricefx-eds-qa-main
+
+      - name: Merge changes excluding fstab.yaml
+        run: |
+          git merge --no-commit --no-ff --allow-unrelated-histories pricefx-eds-qa-main || true
+          git checkout --theirs . || true
+          git reset HEAD fstab.yaml
+          git checkout -- fstab.yaml
+          git add .
+          git commit -m "Sync main branch from pricefx-eds-qa, excluding fstab.yaml"
+
+      - name: Push changes to pricefx-eds-stage
+        run: |
+          git push https://github.com/pricefx/pricefx-eds-stage HEAD:main
+        env:
+          GIT_PERSONAL_ACCESS_TOKEN: ${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}

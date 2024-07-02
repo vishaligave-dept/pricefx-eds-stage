@@ -1,0 +1,74 @@
+[
+  {
+    "id": "main",
+    "components": ["section", "spacer"]
+  },
+  {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": ["button", "google-map", "image", "link-pfx", "text", "title"]
+  },
+  {
+    "id": "section",
+    "components": [
+      "accordion",
+      "articleMetadata",
+      "audio-embed",
+      "breadcrumb",
+      "button",
+      "button-pfx",
+      "cards",
+      "careers",
+      "carousel",
+      "case-study",
+      "code",
+      "columns",
+      "cookie-banner",
+      "download",
+      "embed",
+      "fragment",
+      "google-map",
+      "hero",
+      "iframe",
+      "image",
+      "imageText",
+      "learningCenter",
+      "left-right-boxed",
+      "link-pfx",
+      "marketo-form",
+      "partner-showcase",
+      "quote",
+      "relatedArticles",
+      "richtext",
+      "search",
+      "socialshare",
+      "spacer",
+      "stats",
+      "tabbed-filter",
+      "table",
+      "tabs",
+      "text",
+      "title",
+      "title-pfx"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": ["card"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "tabs",
+    "components": ["tab-item"]
+  },
+  {
+    "id": "table",
+    "components": ["row"]
+  }
+]

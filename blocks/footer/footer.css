@@ -1,0 +1,212 @@
+footer {
+  padding: 0;
+  background-color: var(--c-dark);
+  font-size: var(--body-font-size-s);
+}
+
+footer .footer {
+  max-width: 1900px;
+  margin: auto;
+}
+
+.footer-container {
+  width: 100%;
+  background: #fff;
+  display: block;
+}
+
+.footer-menu-wrapper {
+  background-color: var(--c-footer-drk);
+  padding: 20px var(--spacing-medium) 40px var(--spacing-medium);
+}
+
+.footer-logo-wrapper {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.footer-logo-wrapper a {
+  display: inline-block;
+  height: auto;
+  max-width: 169px;
+  width: 100%;
+}
+
+.footer-logo-wrapper .icon {
+  display: inline-block;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  max-width: 1222px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer .footer-menu-item p {
+  font-family: var(--ff-secondary);
+  font-size: var(--body-font-size-l);
+  font-weight: 800;
+  line-height: 24.51px;
+  text-align: left;
+  color: var(--c-white);
+  margin-bottom: 22px;
+  display: none;
+}
+
+.footer-menu-title-mobile {
+  background: transparent;
+  border: none;
+  color: var(--c-white);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--ff-secondary);
+  font-size: var(--body-font-size-l);
+  font-weight: var(--fw-x-bold);
+  justify-content: space-between;
+  line-height: normal;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer .accordion-icon {
+  position: relative;
+}
+
+.footer .accordion-icon::after {
+  font-family: var(--ff-pricefx-icons);
+  font-size: 24px;
+  font-weight: var(--fw-regular);
+  position: absolute;
+  right: 0;
+}
+
+.footer-menu-title-mobile[aria-expanded = 'false'] .accordion-icon::after {
+  content: var(--icon-plus);
+}
+
+.footer-menu-title-mobile[aria-expanded = 'true'] .accordion-icon::after {
+  content: var(--icon-minus);
+}
+
+.footer .footer-menu-list {
+  max-height: 0;
+  visibility: hidden;
+  transition: max-height 0.15s ease;
+}
+
+.footer .footer-menu-item ul li {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.footer .footer-menu-item a {
+  font-family: var(--ff-secondary);
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: 21.79px;
+  text-decoration: none;
+  color: var(--c-white);
+}
+
+.footer .footer-copyright-section {
+  padding: 32px 30px 27px;
+}
+
+.footer .footer-copyright-section .section[data-backgroundcolor="section-bg-color-grey"] {
+  background-color: transparent;
+}
+
+.footer .footer-copyright-section .social-share-wrapper {
+  margin-bottom: 32px;
+}
+
+.footer .footer-copyright-section .default-content-wrapper {
+  text-align: center;
+}
+
+.footer .footer-copyright-section p {
+  margin: 0;
+  font-family: var(--ff-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+  color: var(--c-gray-med-alt);
+}
+
+.footer .footer-copyright-section  a {
+  margin: 0;
+  font-family: var(--ff-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+  color: var(--c-gray-med-alt);
+  text-decoration: none;
+}
+
+.footer .footer-copyright-section  a:hover,
+.footer .footer-copyright-section  a:focus {
+  text-decoration: underline;
+  color: var(--c-mega-menu-link);
+}
+
+.footer .footer-menu-item a:hover,
+.footer .footer-menu-item a:focus {
+  text-decoration: underline;
+  color: var(--c-mega-menu-link);
+}
+
+/* Responsive Styles */
+@media(width >= 768px) {
+  .footer-menu-wrapper {
+    padding: 20px var(--spacing-small) 56px var(--spacing-small);;
+  }
+
+  .footer-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer .footer-menu-item p {
+    display: block;
+  }
+
+  .footer-menu-title-mobile  {
+    display: none;
+  }
+
+  .footer .footer-menu-list {
+    max-height: none;
+    visibility: visible;
+  }
+
+  .footer .footer-copyright-section {
+    padding: 30px 30px 20px;
+  }
+}
+
+/* Footer Themes */
+.footer--grey.footer .footer-menu-wrapper {
+  background-color: var(--c-gray-lt);
+}
+
+.footer--white.footer .footer-menu-wrapper {
+  background-color: var(--c-white);
+}
+
+.footer--grey.footer .footer-menu-item p,
+.footer--white.footer .footer-menu-item p {
+  color: var(--c-copy);
+}
+
+.footer--grey.footer .footer-menu-item a,
+.footer--white.footer .footer-menu-item a {
+  color: var(--c-copy);
+}
+
+.footer--grey.footer .footer-menu-title-mobile,
+.footer--white.footer .footer-menu-title-mobile {
+  color: var(--c-copy);
+}

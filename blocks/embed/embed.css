@@ -1,0 +1,141 @@
+.embed {
+  width: unset;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 16/9;
+}
+
+.embed.buzzsprout {
+  aspect-ratio: auto;
+}
+
+.embed > div {
+  display: flex;
+  justify-content: center;
+}
+
+.embed.embed-twitter .twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed .embed-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.embed .embed-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.embed .embed-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.embed .embed-placeholder-play {
+  flex-direction: column;
+}
+
+.embed .embed-placeholder-play button {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  background-color: rgb(255 255 255 / 75%);
+  border: 2px solid var(--c-white);
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.embed .embed-placeholder-play button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 20px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid var(--c-full-black);
+  margin-left: 5px;
+}
+
+.embed-play-title {
+  font-family: var(--ff-primary);
+  font-size: var(--base-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.88px;
+  text-align: left;
+  color: var(--c-white);
+  margin-top: 20px;
+}
+
+.embed .embed-default,
+.embed .embed-vimeo,
+.embed .embed-youtube {
+  left: 0;
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.embed .embed-default iframe,
+.embed .embed-vimeo iframe,
+.embed .embed-youtube iframe {
+  border: 0;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+
+.embed .embed-wistia {
+  padding:56.25% 0 0;
+  position:relative;
+}
+
+.embed .embed-wistia-responsive-wrapper {
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  position:absolute;
+}
+
+/* Responsive Styles */
+@media(width >= 768px) {
+  .embed .embed-placeholder-play button {
+    width: 170px;
+    height: 106px;
+  }
+
+  .embed .embed-placeholder-play button::before { 
+    height: 42px;
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+    border-left: 50px solid var(--c-full-black);
+    margin-left: 10px;
+  }  
+}
+
+/* Style System */
+.embed-overlay-text--dark.embed .embed-play-title {
+ color: var(--c-copy);
+}

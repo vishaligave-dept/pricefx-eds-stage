@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "comment-empty-line-before": ["always", { "ignore": ["after-comment"] }],
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }]
+  }
+}

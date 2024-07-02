@@ -1,0 +1,48 @@
+{
+  "name": "pricefx",
+  "private": true,
+  "version": "1.3.0",
+  "description": "Starter project for Adobe Helix",
+  "scripts": {
+    "lint:js": "eslint .",
+    "lint:css": "stylelint blocks/**/*.css styles/*.css",
+    "lint": "npm run lint:js && npm run lint:css",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bounteous-Inc/pricefx-aem.git"
+  },
+  "author": "Adobe",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/Bounteous-Inc/pricefx-aem/issues"
+  },
+  "homepage": "https://github.com/Bounteous-Inc/pricefx-aem#readme",
+  "lint-staged": {
+    "*.{html,json}": "prettier --write",
+    "**/*.{js,cjs}": "eslint --fix",
+    "**/*.css": "stylelint --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.7",
+    "@babel/eslint-parser": "7.23.3",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "chai": "5.0.0",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "standard-version": "^9.5.0",
+    "stylelint": "16.1.0",
+    "stylelint-config-standard": "36.0.0",
+    "stylelint-prettier": "^5.0.0"
+  }
+}

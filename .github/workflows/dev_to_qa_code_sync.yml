@@ -1,0 +1,52 @@
+name: DEV to QA Code Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      syncNow:
+        description: 'Sync Now'
+        required: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Reset changes before merge
+        run: |
+          git reset --hard HEAD
+          git clean -df
+        # Ensures a clean working directory before starting the merge process
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "Github Actions"
+        # Configures Git user identity for the actions
+
+      - name: Fetch latest changes from pricefx-eds
+        run: |
+          git remote add pricefx-eds https://github.com/pricefx/pricefx-eds || true
+          git fetch pricefx-eds main:pricefx-eds-main
+        # Adds pricefx-eds as a remote and fetches the latest changes from main branch
+
+      - name: Merge changes excluding fstab.yaml
+        run: |
+          git merge --no-commit --no-ff --allow-unrelated-histories pricefx-eds-main || true
+          git checkout --theirs . || true
+          git reset HEAD fstab.yaml
+          git checkout -- fstab.yaml
+          git add .
+          git commit -m "Sync main branch from pricefx-eds, excluding fstab.yaml"
+        # Merges changes from pricefx-eds-main branch, resolves conflicts by taking their changes,
+        # and ensures that fstab.yaml remains unchanged locally
+
+      - name: Push changes to pricefx-eds-qa
+        run: |
+          git push https://github.com/pricefx/pricefx-eds-qa HEAD:main
+        env:
+          GIT_PERSONAL_ACCESS_TOKEN: ${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}
+        # Pushes changes to pricefx-eds-qa repository using a GitHub Personal Access Token

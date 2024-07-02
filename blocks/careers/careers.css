@@ -1,0 +1,193 @@
+.section.careers-container .careers-wrapper {
+    max-width: 1188px;
+    background: var(--c-gray-lt);
+    padding: 20px;
+}
+
+.careers h2.careers-join-team {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.careers .careers-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.careers .careers-select select {
+    width: 100%;
+    padding: 15px 45px 15px 20px;
+    appearance: none;
+    border: 2px solid var(--c-gray-border);
+    border-radius: 6px;
+}
+
+.careers .careers-select select::-ms-expand {
+    display: none;
+}
+
+.careers .careers-filter , .careers .careers-sort {
+    width: 100%;
+    position: relative;
+}
+
+.careers .careers-filter::after, .careers .careers-sort::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid var(--c-gray-med-drk);
+    border-right: 2px solid var(--c-gray-med-drk);
+    transform: rotate(45deg);
+    height: var(--spacing-xxsmall);
+    width: var(--spacing-xxsmall);
+    position: absolute;
+    cursor: pointer;
+    top: 42%;
+    right: 28px;
+
+}
+
+.careers .careers-postings-container.loading::before {
+    content: url("../../icons/loading-animation.svg");
+    height: 37px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.careers .careers-postings > h3 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: var(--spacing-small);
+}
+
+.careers .careers-postings > div > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.careers .careers-postings > div > ul li {
+    list-style: none;
+    margin: 0;
+}
+
+.careers .careers-postings .job-container {
+    background: var(--c-white);
+    margin-bottom: 24px;
+}
+
+.careers .careers-postings .job-header h3 {
+    margin: 0;
+}
+
+.careers .careers-postings > div > ul li .job-header {
+    position: relative;
+    cursor: pointer;
+    padding: var(--spacing-small) 36px var(--spacing-small) 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.careers .careers-postings > div > ul li .job-header::after {
+    content:'';
+    display: block;
+    border-bottom: 2px solid var(--c-gray-med-drk);
+    border-right: 2px solid var(--c-gray-med-drk);
+    transform: rotate(45deg);
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    cursor: pointer;
+    right: 16px;
+    top: 45%;
+}
+
+.careers .careers-postings > div > ul li.active .job-header::after {
+    top: 50%;
+    transform: translateY(0%) rotate(225deg);
+    transition: .3s linear all;
+}
+
+.careers .careers-postings > div > ul li .job-details {
+    display: none;
+    text-align: left; 
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.careers .careers-postings > div > ul li.active .job-details {
+    display: block;
+}
+
+.careers .careers-postings .job-details h1,
+.careers .careers-postings .job-details h2,
+.careers .careers-postings .job-details h3,
+.careers .careers-postings .job-details h4,
+.careers .careers-postings .job-details h5,
+.careers .careers-postings .job-details h6 {
+    font-family: var(--ff-primary);
+}
+
+.careers .careers-postings > div > ul li .job-details p:last-child {
+    margin-bottom: 40px;
+}
+
+.careers .careers-postings .job-details ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.careers .careers-postings > div > ul li .job-details a.primary {
+    margin-bottom: 51px;
+}
+
+.careers .careers-social-links.a2a_kit {
+    display: block;
+}
+
+.careers .careers-social-links a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.careers .careers-social-links svg {
+    width: 22px;
+    height: 22px;
+}
+
+@media (width >= 768px) {
+    .section.careers-container .careers-wrapper {
+        padding: 40px;
+    }
+
+    .careers .careers-select {
+        flex-direction: row;
+    }
+
+    .careers .careers-filter , .careers .careers-sort {
+        width: 50%;
+    }
+
+    .careers .careers-postings > div > ul li .job-header::after {
+        right: 40px;
+    }
+
+    .careers .careers-postings > div > ul li .job-details {
+        padding: 40px;
+    }
+
+    .careers .careers-social-links a:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .careers .careers-postings > div > ul li .job-header {
+        padding: var(--spacing-small) 40px;
+    }
+}

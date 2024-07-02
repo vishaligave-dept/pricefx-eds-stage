@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: 'https://author-p131512-e1282667.adobeaemcloud.com/bin/franklin.delivery/pricefx/pricefx-eds-stage/main'
+    type: 'markup'
+    suffix: '.html'

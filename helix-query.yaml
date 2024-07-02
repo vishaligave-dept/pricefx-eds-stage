@@ -1,0 +1,120 @@
+version: 1
+indices:
+  default:
+    include:
+      - /**
+    exclude:
+      - /configuration/**
+      - /nav/**
+      - /footer/**
+      - /metadata/**
+      - /fragments/**
+      - /style-guide/**
+      - /spreadsheets/**
+    target: /query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, "content"), "^(https?:\/\/.*?(pricefx.com))+(.*)|^(.*)")
+      imageAlt:
+        select: head > meta[property="og:image:alt"]
+        value: attribute(el, "content")
+      topics:
+        select: head > meta[name="topics"]
+        value: attribute(el, "content")
+      cq-tags:
+        select: head > meta[name="cq-tags"]
+        value: attribute(el, "content")
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, "content")
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+  articles:
+    include:
+      - /learning-center/**
+    exclude:
+      - /learning-center/writer/**
+    target: /article-index.json
+    properties:
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, "content"), "^(https?:\/\/.*?(pricefx.com))+(.*)|^(.*)")
+      imageAlt:
+        select: head > meta[property="og:image:alt"]
+        value: attribute(el, "content")
+      topics:
+        select: head > meta[name="topics"]
+        value: attribute(el, "content")
+      authors:
+        select: head > meta[name="authors"]
+        value: attribute(el, "content")
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, "content")
+      readingTime:
+        select: head > meta[name="readingtime"]
+        value: attribute(el, "content")
+      articlePublishDate:
+        select: head > meta[name="publishdate"]
+        value: attribute(el, "content")
+      type:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      cq-tags:
+        select: head > meta[name="cq-tags"]
+        value: attribute(el, "content")
+  partners:
+    include:
+      - /partners/**
+    exclude:
+      - /partners/enable-and-pricefx-partnership
+      - /partners/partner-delivery
+      - /partners/partner-showcase
+      - /partners
+      - /partners/rise-with-sap
+    target: /partners-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, "content"), "^(https?:\/\/.*?(pricefx.com))+(.*)|^(.*)")
+      imageAlt:
+        select: head > meta[property="og:image:alt"]
+        value: attribute(el, "content")
+      url:
+        select: head > meta[property="og:url"]
+        value: attribute(el, "content")
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, "content")
+      topics:
+        select: head > meta[name="topics"]
+        value: attribute(el, "content")
+      cq-tags:
+        select: head > meta[name="cq-tags"]
+        value: attribute(el, "content")

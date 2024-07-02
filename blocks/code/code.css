@@ -1,0 +1,29 @@
+.code-wrapper .grid__item {
+    display: inline-block;
+    position: relative;
+}
+
+.code-wrapper img {
+    flex-shrink: 0;
+    width: 95px !important;
+}
+
+.iframe-width {
+    width: 100%;
+}
+
+@media (width >= 768px) {
+    .iframe-width {
+        width: 50%;
+    }
+}
+
+.code-wrapper iframe {
+    width: 100%;
+}
+
+.code-wrapper iframe + a {
+    display: block;
+}
+
+

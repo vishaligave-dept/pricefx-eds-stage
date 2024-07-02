@@ -1,0 +1,22 @@
+{
+  "mappings": [
+    "/content/pricefx/en/:/",
+    "/content/pricefx/style-guide/:/style-guide/",
+    "/content/pricefx/en/spreadsheets/:/spreadsheets/",
+    "/content/pricefx/en/fragments/:/fragments/",
+    "/content/pricefx/en/headers:/.helix/headers.json",
+    "/content/pricefx/en/metadata:/metadata.json",
+    "/content/pricefx/en/configuration/header:/header.json",
+    "/content/pricefx/en/configuration/footer:/footer.json",
+    "/content/pricefx/en/configuration/redirects:/redirects.json",
+    "/content/pricefx.resource/query-index.json:/query-index.json",
+    "/content/pricefx.resource/article-index.json:/article-index.json",
+    "/content/pricefx.resource/partners-index.json:/partners-index.json",
+    "/content/pricefx/en/spreadsheets/customers-logo:/customers-logo.json",
+    "/content/pricefx/en/configuration/config:/.helix/config.json"
+  ],
+  "includes": [
+    "/content/pricefx/",
+    "/content/dam/pricefx/"
+  ]
+}
